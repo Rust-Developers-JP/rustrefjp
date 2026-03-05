@@ -5,7 +5,7 @@ import { getMDXComponents } from "@/mdx-components";
 import type { Metadata } from "next";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import { LLMCopyButton, ViewOptions } from "@/components/ai/page-actions";
-import { gitConfig } from "@/lib/layout.shared";
+import { baseOptions, gitConfig } from "@/lib/layout.shared";
 
 export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const params = await props.params;
@@ -17,7 +17,9 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
-      <DocsTitle>{page.data.title}</DocsTitle>
+      <DocsTitle>
+        {page.data.title} - {baseOptions().nav?.title?.toString()}
+      </DocsTitle>
       <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
       <div className="flex flex-row gap-2 items-center border-b pb-6">
         <LLMCopyButton markdownUrl={markdownUrl} />
