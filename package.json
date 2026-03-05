@@ -1,5 +1,6 @@
 {
   "name": "rustrefjp",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -7,7 +8,7 @@
     "start": "serve out",
     "types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
     "postinstall": "fumadocs-mdx",
-    "lint": "eslint",
+    "lint": "prettier --check . && eslint .",
     "format": "prettier --write ."
   },
   "dependencies": {
@@ -28,7 +29,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "eslint": "^10.0.2",
-    "eslint-config-next": "16.1.6",
+    "eslint-config-next": "^16.1.6",
     "eslint-config-prettier": "^10.1.8",
     "postcss": "^8.5.6",
     "prettier": "^3.8.1",
