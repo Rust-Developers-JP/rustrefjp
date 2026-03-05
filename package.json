@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@orama/orama": "^3.1.18",
+    "@takumi-rs/core": "^0.70.4",
+    "@takumi-rs/image-response": "^0.69.5",
     "fumadocs-core": "16.6.9",
     "fumadocs-mdx": "14.2.9",
     "fumadocs-ui": "16.6.9",
@@ -19,8 +21,7 @@
     "next": "16.1.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "tailwind-merge": "^3.5.0",
-    "@takumi-rs/image-response": "^0.69.5"
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
@@ -28,11 +29,11 @@
     "@types/node": "^25.3.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "eslint": "^10.0.2",
+    "eslint-config-next": "16.1.6",
     "postcss": "^8.5.6",
     "serve": "^14.2.5",
     "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3",
-    "eslint-config-next": "16.1.6",
-    "eslint": "^10.0.2"
+    "typescript": "^5.9.3"
   }
 }
