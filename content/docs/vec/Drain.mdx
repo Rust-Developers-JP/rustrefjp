@@ -104,14 +104,16 @@ assert_eq!(drain.as_slice(), &[1, 2, 3]);
 {/*
 nightly-onlyの関数の場合は、解説内に
 
-> [!NOTE]
-> nightlyでのみ使用可能
+<Callout>
+nightlyでのみ使用可能
+</Callout>
 
 が必須である。
 */}
 
-> [!NOTE]
-> nightlyでのみ使用可能
+<Callout>
+nightlyでのみ使用可能
+</Callout>
 
 内部で使用しているアロケーターを返す関数。
 
@@ -132,8 +134,9 @@ assert_eq!(
 
 ### `keep_rest`
 
-> [!NOTE]
-> nightlyでのみ使用可能
+<Callout>
+nightlyでのみ使用可能
+</Callout>
 
 一度も消費していない要素をもとのベクターに返還する関数。
 
