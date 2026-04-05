@@ -1,47 +1,12 @@
-# rustrefjp
+# rsdocsjp - Rust言語非公式日本語ドキュメント
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+rsdocsjp は、Rust 標準ライブラリおよび関連仕様について、公式ドキュメントの単純な翻訳ではなく、各ライターの理解と解釈に基づいて日本語で解説する非公式プロジェクトです。
 
-It is a Next.js app with [Static Export](https://nextjs.org/docs/app/guides/static-exports) configured.
+## 貢献
 
-Run development server:
+[CONTRIBUTING](./.github/contributing.md)を参照してください。
+開発の最新情報は[Discord](https://discord.com/invite/KDCDNtxzB9)に参加することで入手できます。
 
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
-```
+## ライセンス
 
-Open http://localhost:3000 with your browser to see the result.
-
-## Explore
-
-In the project, you can see:
-
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
-
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
-
-### Fumadocs MDX
-
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
-
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
-
-## Learn More
-
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs
+Rustの慣習に従い、MIT OR Apache License 2.0で管理されています。
