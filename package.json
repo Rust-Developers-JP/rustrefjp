@@ -15,7 +15,7 @@
     "@orama/orama": "^3.1.18",
     "@orama/stopwords": "^3.1.18",
     "@orama/tokenizers": "^3.1.18",
-    "fumadocs-core": "16.6.9",
+    "fumadocs-core": "16.7.11",
     "fumadocs-mdx": "14.2.9",
     "fumadocs-twoslash": "^3.1.14",
     "fumadocs-ui": "16.6.9",
