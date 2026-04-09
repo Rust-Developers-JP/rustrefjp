@@ -27,8 +27,8 @@ jobs:
 
       - name: Move out directory
         run: |
-            mkdir -p tmp/out
-            mv out tmp/out
+          mkdir -p tmp/out
+          mv out tmp/out
 
       - name: Checkout gh-pages
         uses: actions/checkout@v4
@@ -37,13 +37,13 @@ jobs:
 
       - name: Preserve specific directories
         run: |
-            mkdir -p preserve
-            mv out/preview preserve/preview
+          mkdir -p preserve
+          mv out/preview preserve/preview
 
       - name: Adapt new build
         run: |
-            mv -f tmp/out out
-            mv -f preserve/preview out/preview
+          mv -f tmp/out out
+          mv -f preserve/preview out/preview
 
       - name: Clean
         run: |
@@ -51,13 +51,13 @@ jobs:
 
       - name: Commit changes to gh-pages branch
         run: |
-            git config --global user.name "GitHub Actions"
-            git config --global user.email "action@github.com"
-            git add -N .
-            set +e
-            git diff --exit-code --quiet
-            if [[ $? -eq 1 ]]; then
-                git add .
-                git commit -m "Deploy to gh-pages: ${{ github.sha }}"
-                git push origin gh-pages
-            fi
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "action@github.com"
+          git add -N .
+          set +e
+          git diff --exit-code --quiet
+          if [[ $? -eq 1 ]]; then
+              git add .
+              git commit -m "Deploy to gh-pages: ${{ github.sha }}"
+              git push origin gh-pages
+          fi

@@ -2,7 +2,7 @@ name: Build
 description: Build docs
 
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - name: Checkout repository
       uses: actions/checkout@v6
