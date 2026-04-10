@@ -27,8 +27,8 @@ jobs:
 
       - name: Move out directory
         run: |
-          mkdir -p tmp/out
-          mv out tmp/out
+          mkdir -p /tmp/out
+          mv out /tmp/out
 
       - name: Checkout gh-pages
         uses: actions/checkout@v4
@@ -42,7 +42,7 @@ jobs:
 
       - name: Adapt new build
         run: |
-          mv -f tmp/out out
+          mv -f /tmp/out out
           mv -f preserve/preview out/preview
 
       - name: Clean
