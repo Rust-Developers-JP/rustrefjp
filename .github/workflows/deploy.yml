@@ -63,3 +63,6 @@ jobs:
               git commit -m "Deploy to gh-pages: ${{ github.sha }}"
               git push origin gh-pages
           fi
+
+      - name: Checkout pr branches
+        uses: actions/checkout@v4
