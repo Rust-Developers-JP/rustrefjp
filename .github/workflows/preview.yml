@@ -54,7 +54,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `Preview deployed to: https://${context.repo.owner}.github.io/preview/${process.env.PAGE_DIR}`
+              body: `Preview deployed to: https://${context.repo.owner}.github.io/${context.repo.repo}/preview/${process.env.PAGE_DIR}`
             })
 
   cleanup:
