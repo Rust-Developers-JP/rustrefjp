@@ -52,6 +52,7 @@ jobs:
           if [ -e /tmp/preview ]; then
             cp -r -f /tmp/preview/* ./preview
           fi
+          touch .nojekyll || true
 
       - name: Commit changes to gh-pages branch
         run: |
