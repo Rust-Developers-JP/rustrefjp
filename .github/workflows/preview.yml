@@ -42,6 +42,7 @@ jobs:
           git config --global user.email "action@github.com"
           mkdir -p ./preview/${{ env.PAGE_DIR }}
           cp -r -f /tmp/out/* ./preview/${{env.PAGE_DIR}}
+          touch ./preview/${{env.PAGE_DIR}}/.nojekyll || true
           git add .
           git commit -m "Deploy PR preview for #${{ github.event.pull_request.number }}"
           git push origin gh-pages
