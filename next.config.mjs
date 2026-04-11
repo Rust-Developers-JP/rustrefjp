@@ -1,5 +1,6 @@
 import { createMDX } from "fumadocs-mdx/next";
 
+const basePath = process.env.BASE_PATH;
 const withMDX = createMDX();
 
 /** @type {import("next").NextConfig} */
@@ -9,7 +10,7 @@ const config = {
   assetPrefix: "./",
   trailingSlash: true,
   reactStrictMode: true,
-  basePath: process.env.BASE_PATH,
+  basePath,
 };
 
 export default withMDX(config);
