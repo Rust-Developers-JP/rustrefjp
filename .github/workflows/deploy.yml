@@ -46,8 +46,8 @@ jobs:
 
       - name: Adapt new build
         run: |
-          mv -f /tmp/out ./
-          mv -f /tmp/preview ./preview
+          cp -r -f /tmp/out/* ./
+          cp -r -f /tmp/preview/* ./preview
 
       - name: Commit changes to gh-pages branch
         run: |
