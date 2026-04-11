@@ -40,8 +40,8 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "action@github.com"
-          mkdir -p ./out/preview/${{ env.PAGE_DIR }}
-          mv /tmp/out ./out/preview/${{ env.PAGE_DIR }}
+          mkdir -p ./preview/${{ env.PAGE_DIR }}
+          mv -r /tmp/out ./preview/${{ env.PAGE_DIR }}
           git add .
           git commit -m "Deploy PR preview for #${{ github.event.pull_request.number }}"
           git push origin gh-pages

@@ -37,17 +37,17 @@ jobs:
 
       - name: Preserve specific directories
         run: |
-          mkdir -p preserve
-          mv out/preview preserve/preview
-
-      - name: Adapt new build
-        run: |
-          mv -f /tmp/out out
-          mv -f preserve/preview out/preview
+          mkdir -p /tmp/preview
+          mv ./preview /tmp/preview
 
       - name: Clean
         run: |
-          find . -type f ! -path "./.github/*" ! -path "./out/*" ! -path "./.git/*" -delete
+          find . -type f ! -path "./.github/*" ! -path "./.git/*" -delete
+
+      - name: Adapt new build
+        run: |
+          mv -f /tmp/out ./
+          mv -f /tmp/preview ./preview
 
       - name: Commit changes to gh-pages branch
         run: |
