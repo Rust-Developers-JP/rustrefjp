@@ -57,7 +57,7 @@ jobs:
               body: `Preview deployed to: https://${context.repo.owner}.github.io/${context.repo.repo}/preview/${process.env.PAGE_DIR}`
             })
 
-      - name: Checkout pr branches
+      - name: Checkout pr branch
         uses: actions/checkout@v4
 
   cleanup:
