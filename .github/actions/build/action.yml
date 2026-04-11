@@ -1,0 +1,27 @@
+name: Build
+description: Build docs
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+
+    - name: Checkout Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version-file: .node-version
+        registry-url: "https://registry.npmjs.org"
+
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: latest
+
+    - name: Install deps
+      shell: bash
+      run: bun ci
+
+    - name: Build
+      shell: bash
+      run: npm run build

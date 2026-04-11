@@ -2,6 +2,8 @@ name: CI
 
 on:
   push:
+    branches-ignore:
+      - gh-pages
   pull_request:
 
 jobs:
@@ -13,22 +15,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Checkout Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: .node-version
-          registry-url: "https://registry.npmjs.org"
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-
-      - name: Install deps
-        run: bun ci
-
-      - name: Build
-        run: npm run build
+      - name: Build Check
+        uses: ./.github/actions/build
 
   lint:
     name: Lint
