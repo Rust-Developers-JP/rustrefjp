@@ -14,6 +14,7 @@ concurrency:
 
 env:
   PAGE_DIR: pr-preview-${{ github.event.pull_request.number }}
+  BASE_PATH: /${{ github.event.repository.name }}/preview/pr-preview-${{ github.event.pull_request.number }}
 
 jobs:
   build-and-commit:

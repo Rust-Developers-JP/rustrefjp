@@ -9,6 +9,7 @@ const config = {
   assetPrefix: "./",
   trailingSlash: true,
   reactStrictMode: true,
+  basePath: process.env.BASE_PATH,
 };
 
 export default withMDX(config);
