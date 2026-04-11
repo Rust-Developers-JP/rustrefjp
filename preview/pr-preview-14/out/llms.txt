@@ -1,6 +1,0 @@
-# Documentation
-
-- [rustrefjp](/): Rust標準ライブラリを日本語に翻訳する非公式プロジェクトです。
-- [モジュール一覧](/modlist): 現在掲載されているモジュールの一覧です。
-- [std::vec::Drain](/vec/Drain): 構造体 std::vec::Drain
-- [std::vec](/vec/about): モジュール std::vec
