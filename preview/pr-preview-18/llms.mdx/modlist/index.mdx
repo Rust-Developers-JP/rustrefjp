@@ -1,0 +1,9 @@
+# モジュール一覧
+
+
+
+import { source } from "@/lib/source";
+
+{source.getPages().filter((page) => /^.*\/.*\/about$/.test(page.url)).map((page) => (
+    <li key={page.data.title}><a href={page.url}>{page.data.title}</a></li>
+  ))}
