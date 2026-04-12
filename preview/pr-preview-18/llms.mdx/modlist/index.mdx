@@ -4,6 +4,10 @@
 
 import { source } from "@/lib/source";
 
-{source.getPages().filter((page) => /^.*\/.*\/about$/.test(page.url)).map((page) => (
-    <li key={page.data.title}><a href={page.url}>{page.data.title}</a></li>
-  ))}
+{source.getPages().filter((page) => /^.*\/.*\/about$/.test(page.url)).map((page) => {
+    const basePath = process.env.BASE_PATH;
+    const url = `${basePath ?? ""}${page.url}`;
+    return (
+        <li key={page.data.title}><a href={url}>{page.data.title}</a></li>
+    )
+  })}
