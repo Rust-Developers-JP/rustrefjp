@@ -7,7 +7,6 @@ const withMDX = createMDX();
 const config = {
   serverExternalPackages: ["typescript", "twoslash"],
   output: "export",
-  assetPrefix: "./",
   trailingSlash: true,
   reactStrictMode: true,
   basePath,

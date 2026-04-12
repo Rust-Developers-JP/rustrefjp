@@ -3,4 +3,12 @@ title: モジュール一覧
 description: 現在掲載されているモジュールの一覧です。
 ---
 
-- [std::vec](./vec/about.md)
+import { source } from "@/lib/source";
+
+{source.getPages().filter((page) => /^.*\/.*\/about$/.test(page.url)).map((page) => {
+    const basePath = process.env.BASE_PATH;
+    const url = `${basePath ?? ""}${page.url}`;
+    return (
+        <li key={page.data.title}><a href={url}>{page.data.title}</a></li>
+    )
+})}
