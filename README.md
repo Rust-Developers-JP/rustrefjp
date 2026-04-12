@@ -9,4 +9,6 @@ rsdocsjp は、Rust 標準ライブラリおよび関連仕様について、公
 
 ## ライセンス
 
-Rustの慣習に従い、MIT OR Apache License 2.0で管理されています。
+本プロジェクトのソースコードはMIT LicenseまたはApache License 2.0のデュアルライセンスです。
+
+なお、依存ライブラリであるfumadocsはMIT Licenseのもとで提供されており、その条件が別途適用されます。
