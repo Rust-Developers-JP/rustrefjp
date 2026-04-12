@@ -100,7 +100,15 @@ Rustの慣習に従い、明記されてない限りはMIT OR Apache License 2.0
 
 
 
-* [std::vec](./vec/about.md)
+import { source } from "@/lib/source";
+
+{source.getPages().filter((page) => /^.*\/.*\/about$/.test(page.url)).map((page) => {
+    const basePath = process.env.BASE_PATH;
+    const url = `${basePath ?? ""}${page.url}`;
+    return (
+        <li key={page.data.title}><a href={url}>{page.data.title}</a></li>
+    )
+  })}
 
 
 # std::vec::Drain
