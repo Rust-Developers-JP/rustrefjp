@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Build Check
         uses: ./.github/actions/build
@@ -33,7 +33,7 @@ jobs:
           mv ./out/* /tmp/out
 
       - name: Checkout gh-pages
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: gh-pages
 
@@ -60,14 +60,14 @@ jobs:
             })
 
       - name: Checkout pr branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
   cleanup:
     if: github.event.action == 'closed'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout gh-pages
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: gh-pages
 
