@@ -35,7 +35,7 @@ jobs:
       - name: Checkout gh-pages
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.repository }}
+          repository: Rust-Developers-JP/rustrefjp
           ref: gh-pages
 
       - name: Commit changes to gh-pages branch
@@ -70,13 +70,12 @@ jobs:
       - name: Checkout gh-pages
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.repository }}
+          repository: Rust-Developers-JP/rustrefjp
           ref: gh-pages
 
       - name: Remove preview directory
         run: |
           rm -rf ./preview/${{ env.PAGE_DIR }} || exit 0
-          echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
