@@ -40,6 +40,7 @@ jobs:
 
       - name: Commit changes to gh-pages branch
         run: |
+          echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
           git config --global user.name "GitHub Actions"
           git config --global user.email "action@github.com"
           mkdir -p ./preview/${{ env.PAGE_DIR }}
